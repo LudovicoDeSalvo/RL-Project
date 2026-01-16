@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-import gym
+import gymnasium as gym
 import torch
 
 from dqn_agent import DQNAgent

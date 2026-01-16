@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 
-import gym
+import gymnasium as gym
 import torch
 
 from dqn_agent import DQNAgent
