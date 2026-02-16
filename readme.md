@@ -12,7 +12,7 @@ ReMERT modifies the sampling probability of transitions in the replay buffer bas
 ### Weighting Strategy
 Standard Experience Replay samples uniformly. ReMERT assigns importance weights ($w$) to transitions using the following inverse-distance formula:
 
-$$w \propto \frac{1}{\text{distance\_to\_end} + 1}$$
+$$w \propto \frac{1}{\text{distance\\_to\\_end} + 1}$$
 
 Where `distance_to_end` is the number of steps remaining in the episode from the current state. This ensures that states leading up to success or failure are sampled more frequently, accelerating credit assignment.
 
@@ -77,16 +77,13 @@ python visualize.py --checkpoint rmmert_best_eval_run1_epXXX.pt --out my_video_p
 
 Based on the experimental data included in the project:
 
-* 
-**Sample Efficiency:** ReMERT demonstrates a clear advantage in the first 300 episodes, learning crucial milestones faster than standard DQN.
+* **Sample Efficiency:** ReMERT demonstrates a clear advantage in the first 300 episodes, learning crucial milestones faster than standard DQN.
 
 
-* 
-**Stability:** ReMERT exhibits less variance in performance across different runs and maintains higher consistency even when overfitting risks arise in later episodes.
+* **Stability:** ReMERT exhibits less variance in performance across different runs and maintains higher consistency even when overfitting risks arise in later episodes.
 
 
-* 
-**Convergence:** ReMERT generally achieves the target reward threshold (475.0) in fewer episodes compared to the baseline.
+* **Convergence:** ReMERT generally achieves the target reward threshold (475.0) in fewer episodes compared to the baseline.
 
 
 
